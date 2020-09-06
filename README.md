@@ -1,7 +1,12 @@
 marp-recipes
 ============
 
-This repo features [Markdown presentation slide snippets](https://github.com/hahnec/marp-recipes/blob/master/marp_recipes.pdf) using the [Marp](https://marp.app/) framework. Below instructions help setting up the environment.
+This repo features Markdown presentation slide snippets using the [Marp](https://marp.app/) framework. Below examples and instructions help setting up the environment.
+
+Results
+-------
+- [Documentation slides](https://raw.githubusercontent.com/hahnec/marp-recipes/master/marp_recipes.pdf)
+- [My template](https://raw.githubusercontent.com/hahnec/marp-recipes/master/template_hahnec.pdf)
 
 Getting started
 ---------------
