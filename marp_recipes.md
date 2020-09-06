@@ -4,9 +4,7 @@ theme: default
 class: invert
 size: 16:9
 style: |
-  img {
-    background-color: transparent!important;
-  }
+  img {background-color: transparent!important;}
   a:hover, a:active, a:focus {text-decoration: none;}
   header a {color: #ffffff !important; font-size: 30px;}
   footer {color: #148ec8;}
