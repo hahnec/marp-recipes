@@ -21,7 +21,6 @@ Export Slides
 
 1. install node.js from https://nodejs.org/en/download/ and verify it was successful
 ```
-which node
 node --version
 ```
 
@@ -32,7 +31,7 @@ npm install --save-dev @marp-team/marp-cli
 
 3. convert file
 ```
-npx @marp-team/marp-cli ./your.md --pdf
+npx @marp-team/marp-cli ./your.md --pdf --allow-local-files
 npx @marp-team/marp-cli ./your.md --html
 npx @marp-team/marp-cli ./your.md --pptx
 ```
