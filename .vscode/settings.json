@@ -1,0 +1,10 @@
+// Marpit themes
+{
+    "markdown.marp.themes": [
+      "./themes/default.scss",
+      "./themes/gaia.scss",
+      "./themes/uncover.scss",
+      "./themes/hahnec.scss",
+      "./themes/unibern.scss",
+    ]
+  }

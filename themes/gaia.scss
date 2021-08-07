@@ -1,0 +1,328 @@
+/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 4:3 960px 720px
+ */
+
+$color-light: #fff8e1;
+$color-dark: #455a64;
+$color-primary: #0288d1;
+$color-secondary: #81d4fa;
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap');
+@import '~highlight.js/styles/sunburst';
+
+@mixin color-scheme($bg, $text, $highlight) {
+  --color-background: #{$bg};
+  --color-background-stripe: #{rgba($text, 0.1)};
+  --color-foreground: #{$text};
+  --color-dimmed: #{mix($text, $bg, 80%)};
+  --color-highlight: #{$highlight};
+}
+
+svg[data-marp-fitting='svg'] {
+  max-height: 580px; // Slide height - padding * 2
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0 0 0;
+
+  strong {
+    font-weight: inherit;
+  }
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.9em;
+}
+
+p,
+blockquote {
+  margin: 1em 0 0 0;
+}
+
+ul,
+ol {
+  > li {
+    margin: 0.3em 0 0 0;
+
+    > p {
+      margin: 0.6em 0 0 0;
+    }
+  }
+}
+
+code {
+  display: inline-block;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8em;
+  letter-spacing: 0;
+  margin: -0.1em 0.15em;
+  padding: 0.1em 0.2em;
+  vertical-align: baseline;
+}
+
+pre {
+  display: block;
+  margin: 1em 0 0 0;
+  min-height: 1em;
+  overflow: visible;
+
+  code {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 100%;
+    padding: 0.5em;
+    font-size: 0.7em;
+
+    svg[data-marp-fitting='svg'] {
+      max-height: calc(580px - 1em);
+    }
+  }
+}
+
+blockquote {
+  margin: 1em 0 0 0;
+  padding: 0 1em;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: '“';
+    display: block;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    position: absolute;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+    bottom: 0;
+    transform: rotate(180deg);
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+}
+
+mark {
+  background: transparent;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 1em 0 0 0;
+
+  th,
+  td {
+    padding: 0.2em 0.4em;
+    border-width: 1px;
+    border-style: solid;
+  }
+}
+
+header,
+footer,
+section::after {
+  box-sizing: border-box;
+  font-size: 66%;
+  height: 70px;
+  line-height: 50px;
+  overflow: hidden;
+  padding: 10px 25px;
+  position: absolute;
+}
+
+header {
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+footer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+section {
+  background-color: var(--color-background);
+  background-image: linear-gradient(
+    135deg,
+    rgba(#888, 0),
+    rgba(#888, 0.02) 50%,
+    rgba(#fff, 0) 50%,
+    rgba(#fff, 0.05)
+  );
+  color: var(--color-foreground);
+  font-size: 35px;
+  font-family: 'Lato', 'Avenir Next', 'Avenir', 'Trebuchet MS', 'Segoe UI',
+    sans-serif;
+  height: 720px;
+  line-height: 1.35;
+  letter-spacing: 1.25px;
+  padding: 70px;
+  width: 1280px;
+  word-wrap: break-word;
+
+  @include color-scheme($color-light, $color-dark, $color-primary);
+
+  &::after {
+    right: 0;
+    bottom: 0;
+    font-size: 80%;
+  }
+
+  a,
+  mark {
+    color: var(--color-highlight);
+  }
+
+  code {
+    background: var(--color-dimmed);
+    color: var(--color-background);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    strong {
+      color: var(--color-highlight);
+    }
+  }
+
+  pre > code {
+    background: var(--color-foreground);
+  }
+
+  header,
+  footer,
+  section::after,
+  blockquote::before,
+  blockquote::after {
+    color: var(--color-dimmed);
+  }
+
+  table {
+    th,
+    td {
+      border-color: var(--color-foreground);
+    }
+
+    thead th {
+      background: var(--color-foreground);
+      color: var(--color-background);
+    }
+
+    tbody > tr:nth-child(odd) {
+      td,
+      th {
+        background: var(--color-background-stripe, transparent);
+      }
+    }
+  }
+
+  > *:first-child,
+  > header:first-child + * {
+    margin-top: 0;
+  }
+
+  &.invert {
+    @include color-scheme($color-dark, $color-light, $color-secondary);
+  }
+
+  &.gaia {
+    @include color-scheme($color-primary, $color-light, $color-secondary);
+  }
+
+  &.lead {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-align: center;
+
+      svg[data-marp-fitting='svg'] {
+        --preserve-aspect-ratio: xMidYMid meet;
+      }
+    }
+
+    p {
+      text-align: center;
+    }
+
+    blockquote {
+      > h1,
+      > h2,
+      > h3,
+      > h4,
+      > h5,
+      > h6,
+      > p {
+        text-align: left;
+      }
+
+      svg[data-marp-fitting='svg']:not([data-marp-fitting-math]) {
+        --preserve-aspect-ratio: xMinYMin meet;
+      }
+    }
+
+    ul,
+    ol {
+      > li > p {
+        text-align: left;
+      }
+    }
+
+    table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
