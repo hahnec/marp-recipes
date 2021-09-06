@@ -14,7 +14,8 @@ Getting started
 2. open VS Code and choose `Extensions` on the vertical tab bar
 3. type `Marp for VS Code` and install the extension
 4. open a Markdown file (e.g. marp_recipes.md from this repo)
-5. press `ctrl+shift+v` on Win or `cmd+shift+v` on macOS for preview
+5. press `ctrl+shift+v` (Linux & Win) or `cmd+shift+v` on macOS for the slides preview
+6. Unix systems may require an installation of [Google Chrome](https://www.google.com/chrome/index.html) or [Chromium](https://www.chromium.org/)
 
 Export Slides
 -------------

@@ -1,2 +1,6 @@
-.idea/.gitignore
-.DS_Store
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Custom ignored files
+*.DS_Store
