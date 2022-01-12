@@ -17,8 +17,8 @@ Getting started
 5. press `ctrl+shift+v` (Linux & Win) or `cmd+shift+v` on macOS for the slides preview
 6. Unix systems may require an installation of [Google Chrome](https://www.google.com/chrome/index.html) or [Chromium](https://www.chromium.org/)
 
-Export Slides
--------------
+CLI Slide Export
+----------------
 
 1. install node.js from https://nodejs.org/en/download/ and verify it was successful
 ```
@@ -32,7 +32,7 @@ npm install --save-dev @marp-team/marp-cli
 
 3. convert file
 ```
-npx @marp-team/marp-cli ./your.md --pdf --allow-local-files
-npx @marp-team/marp-cli ./your.md --html
-npx @marp-team/marp-cli ./your.md --pptx
+npx @marp-team/marp-cli ./template_hahnec.md --pdf --allow-local-files --theme-set ./themes/
+npx @marp-team/marp-cli ./template_hahnec.md --html --theme ./themes/hahnec.css
+npx @marp-team/marp-cli ./template_hahnec.md --pptx --theme-set ./themes/
 ```
