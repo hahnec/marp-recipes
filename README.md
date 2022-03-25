@@ -39,5 +39,5 @@ $ npx @marp-team/marp-cli ./template_hahnec.md --pptx --theme-set ./themes/
 
 or use the provided bash script to generate outputs
 ```
-$ compile.sh
+$ bash compile.sh
 ```
