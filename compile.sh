@@ -12,7 +12,7 @@ fi
 
 echo ""
 echo "Starting PDF file generation ..."
-npx @marp-team/marp-cli $1 --pdf --allow-local-files --theme-set ./themes/
+npx @marp-team/marp-cli $1 --html --pdf --allow-local-files --theme-set ./themes/
 echo "PDF file generation completed"
 
 echo ""
