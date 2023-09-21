@@ -8,7 +8,7 @@ style: |
   a:hover, a:active, a:focus {text-decoration: none;}
   header a {color: #ffffff !important; font-size: 30px;}
   footer {color: #148ec8;}
-header: '[&#9671;](#1, " ")'
+header: '[&#9671;](#1 " ")'
 footer: 'Slides by [Chris](http://www.christopherhahne.de)'
 ---
 
@@ -16,12 +16,12 @@ footer: 'Slides by [Chris](http://www.christopherhahne.de)'
 
 .. with some text below
 
-- a bullet point is initiated by single hypen `-`
+- a bullet point is initiated by single hyphen `-`
 <!-- paginate: true -->
 - page numbers on the lower right are globally activated using
 `<!-- paginate: true -->`
 
-- page breaks are caused by triple hypen `---`
+- page breaks are caused by triple hyphen `---`
 
 ---
 
@@ -54,7 +54,7 @@ results in page number suppression on this slide only
 the global page layout in these slides was set via 
 
 ```
-header: '[&#9671;](#1, " ")'
+header: '[&#9671;](#1 " ")'
 
 footer: 'Slides by [Chris](http://www.christopherhahne.de)'
 ```
@@ -210,7 +210,7 @@ https://gist.github.com/rxaviers/7360908
 for outline entries you may use `x. [section](#page_num)` as in
 
 1. [opening slide](#1 "opening slide")
-2. [layout](#3, "layout")
+2. [layout](#3 "layout")
 3. [export slides](#5 "export slides")
 4. [$\LaTeX$](#6 "LaTeX")
 5. [syntax](#7 "syntax")
