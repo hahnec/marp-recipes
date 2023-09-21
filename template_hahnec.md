@@ -4,7 +4,7 @@ theme: hahnec
 size: 4K
 paginate: false
 footer: '[![](http://www.christopherhahne.de/images/favicons/apple-touch-icon-72x72.png)](http://www.christopherhahne.de)[Christopher Hahne](http://www.christopherhahne.de)'
-header: '[&#9635;](#1, " ")  &nbsp; Title'
+header: '[&#9635;](#1 " ")  &nbsp; Title'
 ---
 
 # Headline
