@@ -16,12 +16,12 @@ footer: 'Slides by [Chris](http://www.christopherhahne.de)'
 
 .. with some text below
 
-- a bullet point is initiated by single hypen `-`
+- a bullet point is initiated by single hyphen `-`
 <!-- paginate: true -->
 - page numbers on the lower right are globally activated using
 `<!-- paginate: true -->`
 
-- page breaks are caused by triple hypen `---`
+- page breaks are caused by triple hyphen `---`
 
 ---
 
